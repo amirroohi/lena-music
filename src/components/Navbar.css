@@ -1,0 +1,134 @@
+/* src/components/Navbar.css */
+
+/* نوار ناوبری */
+.navbar {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0); /* پس‌زمینه نیمه‌شفاف */
+  backdrop-filter: blur(10px); /* افکت تار شدن */
+  color: black; /* تغییر رنگ متن برای تطابق با پس‌زمینه */
+  position: sticky; /* Navbar چسبیده به بالای صفحه */
+  top: 0; /* موقعیت بالای صفحه */
+  z-index: 1000; /* بالاترین لایه */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* سایه برای زیبایی */
+  height: 55px;
+}
+.navbar-logo {
+  margin-left: 10px;
+}
+.navbar-logo img {
+  width: 50px;
+  padding: 8px 0;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+}
+.navbar-links li {
+  text-align: center;
+}
+.navbar-links li a {
+  display: inline-block;
+  text-align: center;
+  color: #5a5a5a;
+  text-decoration: none;
+  padding: 8px 0;
+}
+
+.navbar-links li a:hover {
+  color: chocolate;
+}
+
+/* همبرگر */
+.hamburger,
+.activeHamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  transition: transform 0.3s ease; /* انیمیشن هنگام کلیک */
+  padding: 8px;
+  height: 35px;
+}
+
+.hamburger.active {
+  transform: rotate(90deg); /* مثال چرخش هنگام فعال بودن */
+}
+
+.hamburger .bar,
+.activeHamburger .bar {
+  width: 25px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #353535;
+  transition: all 0.3s ease; /* تنظیم انیمیشن */
+}
+.activeHamburger .bar:first-child {
+  transform: rotate(45deg) translate(4px, -4px);
+  transform-origin: 0% 0%;
+  transition: all 0.3s ease; /* تنظیم انیمیشن */
+}
+.activeHamburger .bar:nth-child(2) {
+  opacity: 0;
+  transition: all 0.3s ease; /* تنظیم انیمیشن */
+}
+.activeHamburger .bar:last-child {
+  transform: rotate(-45deg) translate(2px, 4px);
+  transform-origin: 0% 0%;
+  transition: all 0.3s ease; /* تنظیم انیمیشن */
+}
+
+/* واکنش‌گرایی */
+@media (max-width: 768px) {
+  /* منوی کشویی (حالت اولیه: پنهان) */
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    padding: 20px 0;
+    opacity: 0; /* منو نامرئی است */
+    transform: translateY(50px); /* منو کمی بالاتر از جایگاه واقعی خود است */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* تنظیم انیمیشن */
+    pointer-events: none; /* برای جلوگیری از کلیک هنگام بسته بودن */
+    border-radius: 20px;
+    margin-right: 10px;
+    backdrop-filter: blur(10px); /* تار شدن منوی موبایل */
+  }
+
+  /* منوی کشویی (باز شدن) */
+  .navbar-links.active {
+    opacity: 1; /* منو قابل مشاهده می‌شود */
+    transform: translateY(0px); /* منو به جایگاه واقعی خود بازمی‌گردد */
+    pointer-events: auto; /* کلیک فعال می‌شود */
+    z-index: 100;
+    border-radius: 20px;
+    backdrop-filter: blur(100px); /* تار شدن منوی موبایل */
+    padding: 20px 0;
+  }
+
+  .navbar-links li a {
+    color: #f7f7f7;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .hamburger,
+  .activeHamburger {
+    display: flex;
+  }
+}

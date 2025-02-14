@@ -1,0 +1,167 @@
+/* src/components/Home.css */
+
+/* استایل Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 90vh; /* ارتفاع بخش */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/piano-wallpaper.jpg"); /* تصویر پس‌زمینه */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  margin: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #60A5FA;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e05252;
+}
+
+/* استایل‌های دیگر */
+.home {
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+.loading-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(61, 60, 60, 0.274);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.loading-content {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* بخش درباره آموزشگاه */
+.about-section {
+  padding: 60px 20px 40px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* بخش لیست اساتید */
+.teachers-section {
+  padding: 40px 20px;
+}
+
+.teachers-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.teachers-list--home {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px;
+  flex-wrap: nowrap;
+  touch-action: auto;
+  max-width: 100%;
+  flex-direction: row-reverse;
+  margin: 0 40px;
+  scrollbar-width: thin;
+}
+
+.teacher-card--home {
+  flex: 0 0 auto;
+  width: 150px;
+  text-align: center;
+}
+
+.teacher-card--home img {
+  width: 100%;
+  height: auto;
+  border-radius: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.teacher-card--home p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* واکنش‌گرایی */
+@media (max-width: 768px) {
+
+  .teachers-list--home {
+    margin: 0;
+  }
+  .hero-content h1 {
+    font-size: 2em;
+  }
+  .hero-content p {
+    font-size: 1em;
+  }
+}
