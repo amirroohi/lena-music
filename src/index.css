@@ -83,3 +83,10 @@ a,a:hover{
 html{
   scroll-behavior: smooth;
 }
+body{
+  background-color: #363636;
+  color: rgba(255, 255, 255, 0.87);
+}
+p{
+  color: rgba(255, 255, 255, 0.87);
+}

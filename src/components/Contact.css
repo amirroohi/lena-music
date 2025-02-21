@@ -6,7 +6,6 @@
 
 .contact h1 {
   font-size: 2.5em;
-  color: #333;
   margin-bottom: 40px;
 }
 
@@ -18,5 +17,4 @@
 .contact li {
   font-size: 1.2em;
   margin: 10px 0;
-  color: #555;
 }

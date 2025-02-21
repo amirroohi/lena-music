@@ -9,7 +9,7 @@
   padding: 10px 20px;
   background: rgba(255, 255, 255, 0); /* پس‌زمینه نیمه‌شفاف */
   backdrop-filter: blur(10px); /* افکت تار شدن */
-  color: black; /* تغییر رنگ متن برای تطابق با پس‌زمینه */
+  color: rgba(255, 255, 255, 0.87); /* تغییر رنگ متن برای تطابق با پس‌زمینه */
   position: sticky; /* Navbar چسبیده به بالای صفحه */
   top: 0; /* موقعیت بالای صفحه */
   z-index: 1000; /* بالاترین لایه */
@@ -37,7 +37,7 @@
 .navbar-links li a {
   display: inline-block;
   text-align: center;
-  color: #5a5a5a;
+  color: rgba(255, 255, 255, 0.87);
   text-decoration: none;
   padding: 8px 0;
 }
@@ -67,7 +67,7 @@
   width: 25px;
   height: 3px;
   border-radius: 5px;
-  background-color: #353535;
+  background-color: rgba(255, 255, 255, 0.87);
   transition: all 0.3s ease; /* تنظیم انیمیشن */
 }
 .activeHamburger .bar:first-child {
@@ -91,7 +91,7 @@
   .navbar-links {
     display: flex;
     flex-direction: column;
-    background-color: #333;
+    background-color: rgba(255, 255, 255, 0.87);
     position: absolute;
     top: 60px;
     right: 0;
@@ -120,7 +120,7 @@
   }
 
   .navbar-links li a {
-    color: #f7f7f7;
+    color: #242424;
   }
 
   .navbar-links.active {
