@@ -1,33 +1,29 @@
-// src/components/Navbar.js
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = () => {
+const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null); // ارجاع به منوی باز شده
-  const hamburgerRef = useRef(null); // ارجاع به دکمه همبرگر
+  const menuRef = useRef(null);
+  const hamburgerRef = useRef(null);
 
   const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev); // تغییر وضعیت منو
+    setIsMenuOpen((prev) => !prev);
   };
 
-  // بستن منو در صورت کلیک خارج از آن
   useEffect(() => {
     const handleClickOutside = (event) => {
-      // بررسی کلیک خارج از منو و دکمه همبرگر
       if (
         menuRef.current &&
         !menuRef.current.contains(event.target) &&
         hamburgerRef.current &&
         !hamburgerRef.current.contains(event.target)
       ) {
-        setIsMenuOpen(false); // بستن منو
+        setIsMenuOpen(false);
       }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -35,19 +31,14 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-        <img src="/path-to-your-logo/logo.png" alt="لوگو" />
-      </div>
-      <div ref={hamburgerRef} className={isMenuOpen?"activeHamburger":"hamburger"} onClick={toggleMenu}>
-        {/* آیکون همبرگر */}
+
+      <div ref={hamburgerRef} className={isMenuOpen ? "activeHamburger" : "hamburger"} onClick={toggleMenu}>
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
       </div>
-      <ul
-        ref={menuRef}
-        className={`navbar-links ${isMenuOpen ? "active" : ""}`}
-      >
+
+      <ul ref={menuRef} className={`navbar-links ${isMenuOpen ? "active" : ""}`}>
         <li>
           <Link to="/" onClick={() => setIsMenuOpen(false)}>
             صفحه اصلی
@@ -69,8 +60,18 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
+
+      <div className="navbar-logo">
+        <img src="/logo-lena-light.svg" alt="لوگو" />
+      </div>
+      {/* لینک زمان‌بندی کلاس‌ها در سمت چپ نوبار */}
+      <div className="navbar-schedule">
+        <Link to="/schedule" className="schedule-link">
+          ⏳ زمان‌بندی کلاس‌ها
+        </Link>
+      </div>
     </nav>
   );
 };
 
-export default Navbar;
+export default NavBar;

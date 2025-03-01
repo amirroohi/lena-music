@@ -3,7 +3,8 @@
 /* نوار ناوبری */
 .navbar {
   display: flex;
-  flex-direction: row-reverse;
+  width: 100%;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
@@ -16,12 +17,27 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* سایه برای زیبایی */
   height: 55px;
 }
+
+.schedule-link {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.schedule-link:hover {
+  color: #ffa500;
+}
+
 .navbar-logo {
   margin-left: 10px;
 }
 .navbar-logo img {
-  width: 50px;
+  width: 30px;
+  height: 100%;
   padding: 8px 0;
+  fill: aliceblue;
 }
 
 .navbar-links {

@@ -1,0 +1,33 @@
+.schedule-page {
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  .schedule-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .schedule-table th, .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .schedule-table th {
+    background-color: #333;
+    color: white;
+  }
+  
+  .schedule-table tr:nth-child(even) {
+    background-color: #3a3a3a;
+  }
+  
+  .schedule-table tr:hover {
+    background-color: #ddd;
+  }
+  
