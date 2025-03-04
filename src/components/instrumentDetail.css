@@ -1,0 +1,23 @@
+.instrument-detail-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.instrument-detail-page img {
+  width: 50%;
+  max-width: 500px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.teacher-list {
+  list-style: none;
+  padding: 0;
+}
+
+.teacher-list li {
+  background: #eee;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}

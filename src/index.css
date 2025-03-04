@@ -84,7 +84,8 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  background-color: #363636;
+  /* background-color: #363636; */
+  background-color: #242424;
   color: rgba(255, 255, 255, 0.87);
 }
 p{

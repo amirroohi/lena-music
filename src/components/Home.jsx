@@ -8,9 +8,9 @@ const Home = () => {
   return (
     <div className="home">
       {/* بخش Hero */}
+          <h1>آکادمی موسیقی لنا</h1>
       <div className="hero-section">
         <div className="hero-content">
-          <h1>آکادمی موسیقی لنا</h1>
           <p>یادگیری موسیقی با بهترین اساتید در محیطی دوستانه</p>
           <a className="cta-button" href="#about">اطلاعات بیشتر</a>
         </div>

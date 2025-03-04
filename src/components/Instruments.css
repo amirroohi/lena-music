@@ -1,0 +1,31 @@
+.instruments-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.instruments-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.instrument-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  width: 200px;
+  transition: 0.3s;
+}
+
+.instrument-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.instrument-card:hover {
+  transform: scale(1.05);
+}

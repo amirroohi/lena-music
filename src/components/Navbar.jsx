@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { HiOutlineCalendar } from "react-icons/hi";
 import "./Navbar.css";
 
 const NavBar = () => {
@@ -31,14 +32,24 @@ const NavBar = () => {
 
   return (
     <nav className="navbar">
-
-      <div ref={hamburgerRef} className={isMenuOpen ? "activeHamburger" : "hamburger"} onClick={toggleMenu}>
+      <div
+        ref={hamburgerRef}
+        className={isMenuOpen ? "activeHamburger" : "hamburger"}
+        onClick={toggleMenu}
+      >
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
       </div>
 
-      <ul ref={menuRef} className={`navbar-links ${isMenuOpen ? "active" : ""}`}>
+      <div className="navbar-logo">
+        <img src="/logo-lena-light.svg" alt="لوگو" />
+      </div>
+
+      <ul
+        ref={menuRef}
+        className={`navbar-links ${isMenuOpen ? "active" : ""}`}
+      >
         <li>
           <Link to="/" onClick={() => setIsMenuOpen(false)}>
             صفحه اصلی
@@ -47,6 +58,16 @@ const NavBar = () => {
         <li>
           <Link to="/teachers" onClick={() => setIsMenuOpen(false)}>
             اساتید
+          </Link>
+        </li>
+        <li>
+          <Link to="/instruments" onClick={() => setIsMenuOpen(false)}>
+            ساز ها
+          </Link>
+        </li>
+        <li>
+          <Link to="/schedule" onClick={() => setIsMenuOpen(false)}>
+            زمانبندی کلاس ها
           </Link>
         </li>
         <li>
@@ -61,13 +82,10 @@ const NavBar = () => {
         </li>
       </ul>
 
-      <div className="navbar-logo">
-        <img src="/logo-lena-light.svg" alt="لوگو" />
-      </div>
       {/* لینک زمان‌بندی کلاس‌ها در سمت چپ نوبار */}
       <div className="navbar-schedule">
         <Link to="/schedule" className="schedule-link">
-          ⏳ زمان‌بندی کلاس‌ها
+          <HiOutlineCalendar />
         </Link>
       </div>
     </nav>

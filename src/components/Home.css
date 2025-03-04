@@ -1,6 +1,7 @@
 /* src/components/Home.css */
 
 /* استایل Hero Section */
+
 .hero-section {
   position: relative;
   width: 100%;
@@ -21,9 +22,10 @@
   margin: 0 20px;
 }
 
-.hero-content h1 {
+.home h1 {
   font-size: 3em;
-  margin-bottom: 20px;
+  margin: 20px 0;
+  padding: 0 15px;
 }
 
 .hero-content p {
@@ -34,7 +36,7 @@
 .cta-button {
   padding: 10px 20px;
   font-size: 1em;
-  background-color: #60A5FA;
+  background-color: #60a5fa;
   color: white;
   border: none;
   border-radius: 20px;
@@ -68,17 +70,17 @@
 
 .loading-content {
   text-align: center;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
+  padding: 0px;
+  border-radius: 100%;
+  background: transparent;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .spinner {
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
   border: 5px solid rgba(0, 0, 0, 0.1);
-  border-top: 5px solid #333;
+  border-top: 5px solid #ffffff;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -153,7 +155,6 @@
 
 /* واکنش‌گرایی */
 @media (max-width: 768px) {
-
   .teachers-list--home {
     margin: 0;
   }
@@ -162,5 +163,8 @@
   }
   .hero-content p {
     font-size: 1em;
+  }
+  .home h1 {
+    font-size: 2em;
   }
 }

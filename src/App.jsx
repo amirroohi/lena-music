@@ -9,6 +9,8 @@ import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 import TeacherDetail from "./components/TeacherDetail";
 import Schedule from "./components/Schedule.jsx";
+import Instruments from "./components/Instruments.jsx";
+import InstrumentDetail from "./components/InstrumentDetail.jsx";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -16,23 +18,20 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 500);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
 
-  if (isLoading) {
-    return (
-      <div className="loading-modal">
-        <div className="loading-content">
-          <div className="spinner"></div>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="App">
+      {isLoading && (
+        <div className="loading-modal">
+          <div className="loading-content">
+            <div className="spinner"></div>
+          </div>
+        </div>
+      )}
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -40,7 +39,12 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/teachers" element={<Teachers />} />
         <Route path="/teachers/:id" element={<TeacherDetail />} />
-        <Route path="/schedule" element={<Schedule />} /> {/* 👈 مسیر زمان‌بندی */}
+        <Route path="/schedule" element={<Schedule />} />{" "}
+        {/* 👈 مسیر زمان‌بندی */}
+        <Route path="/instruments" element={<Instruments />} />{" "}
+        {/* 👈 صفحه لیست سازها */}
+        <Route path="/instruments/:id" element={<InstrumentDetail />} />{" "}
+        {/* 👈 صفحه جزئیات ساز */}
       </Routes>
       <Footer />
     </div>
