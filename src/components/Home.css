@@ -20,6 +20,12 @@
   color: white;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 10px;
+  justify-content: end;
+  align-items: center;
 }
 
 .home h1 {
@@ -30,14 +36,15 @@
 
 .hero-content p {
   font-size: 1.2em;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .cta-button {
   padding: 10px 20px;
-  font-size: 1em;
+  font-size: 0.8rem;
   background-color: #60a5fa;
   color: white;
+  width: fit-content;
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -69,6 +76,7 @@
 }
 
 .loading-content {
+  position: relative;
   text-align: center;
   padding: 0px;
   border-radius: 100%;
@@ -83,6 +91,13 @@
   border-top: 5px solid #ffffff;
   border-radius: 50%;
   animation: spin 1s linear infinite;
+}
+
+.loading-content img{
+  width: 24px;
+  position: absolute;
+  top: 15px;
+  left: 20px;
 }
 
 @keyframes spin {

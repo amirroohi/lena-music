@@ -28,7 +28,9 @@ function App() {
       {isLoading && (
         <div className="loading-modal">
           <div className="loading-content">
-            <div className="spinner"></div>
+            <div className="spinner">
+            </div>
+              <img src="/logo-lena-light.svg" alt="لوگو" />
           </div>
         </div>
       )}
