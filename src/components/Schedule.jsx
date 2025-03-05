@@ -9,9 +9,9 @@ const Schedule = () => {
       <table className="schedule-table">
         <thead>
           <tr>
-            <th>👨‍🏫 نام استاد</th>
-            <th>🎼 سازها</th>
-            <th>📅 روزها</th>
+            <th>استاد</th>
+            <th>ساز</th>
+            <th>روزها</th>
           </tr>
         </thead>
         <tbody>

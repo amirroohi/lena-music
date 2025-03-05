@@ -13,21 +13,21 @@
   }
   
   .schedule-table th, .schedule-table td {
-    border: 1px solid #ddd;
     padding: 12px;
     text-align: center;
   }
   
   .schedule-table th {
-    background-color: #333;
-    color: white;
+    background-color: #cacaca;
+    color: rgb(41, 41, 41);
   }
   
   .schedule-table tr:nth-child(even) {
-    background-color: #3a3a3a;
+    background-color: #3a3939;
   }
   
   .schedule-table tr:hover {
     background-color: #ddd;
+    color: #333;
   }
   

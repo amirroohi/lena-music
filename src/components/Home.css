@@ -6,7 +6,7 @@
   position: relative;
   width: 100%;
   height: 50vh; /* ارتفاع بخش */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("/piano-compressed.jpg"); /* تصویر پس‌زمینه */
   background-size: cover;
   background-position: center;
@@ -18,7 +18,6 @@
 .hero-content {
   text-align: center;
   color: white;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   margin: 0 20px;
   display: flex;
   flex-direction: column;
@@ -37,22 +36,26 @@
 .hero-content p {
   font-size: 1.2em;
   margin-bottom: 10px;
+  text-shadow: 0 3px 4px rgb(0, 0, 0);
 }
 
 .cta-button {
   padding: 10px 20px;
   font-size: 0.8rem;
-  background-color: #60a5fa;
+  background-color: rgba(0, 0, 0, 0.123);
   color: white;
+  text-shadow: 0 3px 4px rgb(0, 0, 0);
   width: fit-content;
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  box-shadow:0 0px 5px 5px rgb(0, 0, 0);
+  transition: box-shadow 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #e05252;
+  background-color: transparent;
+  box-shadow:0 0px 10px 5px rgb(0, 0, 0);
 }
 
 /* استایل‌های دیگر */
@@ -181,5 +184,9 @@
   }
   .home h1 {
     font-size: 2em;
+  }
+  .about-section h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
   }
 }

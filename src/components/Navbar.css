@@ -15,7 +15,7 @@
   top: 0; /* موقعیت بالای صفحه */
   z-index: 1000; /* بالاترین لایه */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* سایه برای زیبایی */
-  height: 55px;
+  height: 65px;
 }
 
 .navbar-schedule{
