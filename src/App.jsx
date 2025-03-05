@@ -8,9 +8,9 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 import TeacherDetail from "./components/TeacherDetail";
-import Schedule from "./components/Schedule.jsx";
-import Instruments from "./components/Instruments.jsx";
-import InstrumentDetail from "./components/InstrumentDetail.jsx";
+import Schedule from "./components/Schedule";
+import Instruments from "./components/Instruments";
+import InstrumentDetail from "./components/InstrumentDetail";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
