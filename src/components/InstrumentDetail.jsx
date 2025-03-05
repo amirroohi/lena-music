@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { instrumentsData } from "../data/instruments";
 import { teachers } from "../data/teachers";
-import "./instrumentDetail.css";
+import "./InstrumentDetail.css";
 
 const InstrumentDetail = () => {
   const { id } = useParams();
