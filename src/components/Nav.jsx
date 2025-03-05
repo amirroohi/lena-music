@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { HiOutlineCalendar } from "react-icons/hi";
 import "./Navbar.css";
 
-const NavBar = () => {
+const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const hamburgerRef = useRef(null);
@@ -92,4 +92,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Nav;
