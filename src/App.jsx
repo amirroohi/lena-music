@@ -2,7 +2,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Teachers from "./components/Teachers";
-import NavBar from "./components/Nav.jsx";
+import Nav from "./components/Nav.jsx";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -28,13 +28,12 @@ function App() {
       {isLoading && (
         <div className="loading-modal">
           <div className="loading-content">
-            <div className="spinner">
-            </div>
-              <img src="/logo-lena-light.svg" alt="لوگو" />
+            <div className="spinner"></div>
+            <img src="/logo-lena-light.svg" alt="لوگو" />
           </div>
         </div>
       )}
-      <NavBar />
+      <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
