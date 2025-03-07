@@ -3,6 +3,7 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "./Contact.css";
 
 const position = [35.6393122, 51.3940574];
+const locationURL = "https://maps.app.goo.gl/kirvsfQygcpmJhNg6";
 const Contact = () => {
   return (
     <div className="contact">
@@ -18,20 +19,22 @@ const Contact = () => {
         </li>
       </ul>
       <div>
-        <MapContainer
-          id="map"
-          center={position}
-          zoom={16}
-          scrollWheelZoom={false}
-        >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={position}>
-            <Popup>آکادمی موسیقی لنا</Popup>
-          </Marker>
-        </MapContainer>
+        <a href={locationURL}>
+          <MapContainer
+            id="map"
+            center={position}
+            zoom={16}
+            scrollWheelZoom={false}
+          >
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={position}>
+              <Popup>آکادمی موسیقی لنا</Popup>
+            </Marker>
+          </MapContainer>
+        </a>
       </div>
     </div>
   );
