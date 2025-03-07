@@ -28,3 +28,9 @@
   height: 300px;
   width: 500px;
 }
+@media (max-width: 768px) {
+  #map {
+    height: 500px;
+    width: 300px;
+  }
+}
