@@ -22,6 +22,15 @@
   max-width: 500px;
   width: 100%;
 }
+.footer-desc--title{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.footer-desc--title img{
+  height: 50px;
+}
 .footer-social {
   display: flex;
   flex-direction: column;

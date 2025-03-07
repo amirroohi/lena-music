@@ -3,6 +3,10 @@
   padding: 20px;
 }
 
+.instruments-page h1 {
+  margin: 45px 0 20px;
+}
+
 .instruments-list {
   display: flex;
   flex-wrap: wrap;
@@ -11,13 +15,13 @@
 }
 
 .instrument-card {
-  background: white;
+  background: rgb(29, 29, 29);
   padding: 15px;
   border-radius: 8px;
   text-align: center;
   text-decoration: none;
-  color: black;
-  width: 200px;
+  color: rgb(255, 255, 255);
+  width: 140px;
   transition: 0.3s;
   display: flex;
   flex-direction: column;
@@ -30,4 +34,9 @@
 .instrument--img {
   height: 170px;
   object-fit: contain;
+  filter: drop-shadow(0 0 0.5rem rgb(99, 99, 99));
+}
+.instrument--title {
+  margin-top: 5px;
+  font-size: 1rem;
 }

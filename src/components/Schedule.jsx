@@ -9,17 +9,17 @@ const Schedule = () => {
       <table className="schedule-table">
         <thead>
           <tr>
-            <th>استاد</th>
             <th>ساز</th>
             <th>روزها</th>
+            <th>استاد</th>
           </tr>
         </thead>
         <tbody>
           {teachers.map((teacher) => (
             <tr key={teacher.id}>
-              <td>{teacher.name}</td>
               <td>{teacher.instruments.join(", ")}</td>
               <td>{teacher.availableDays.join(" - ")}</td>
+              <td>{teacher.name}</td>
             </tr>
           ))}
         </tbody>

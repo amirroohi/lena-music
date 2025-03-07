@@ -5,16 +5,54 @@ import "./Instruments.css";
 const Instruments = () => {
   return (
     <div className="instruments-page">
-      <h1>🎼 لیست سازهای موسیقی</h1>
+      <h1>ساز های زهی</h1>
       <div className="instruments-list">
-        {instrumentsData.map((instrument) => (
+        {instrumentsData["string"].map((instrument) => (
           <Link
             to={`/instruments/${instrument.id}`}
             key={instrument.id}
             className="instrument-card"
           >
-            <img src={instrument.image} alt={instrument.name} className="instrument--img" />
-            <h2>{instrument.name}</h2>
+            <img
+              src={instrument.image}
+              alt={instrument.name}
+              className="instrument--img"
+            />
+            <h2 className="instrument--title">{instrument.name}</h2>
+          </Link>
+        ))}
+      </div>
+      <h1>ساز های کوبه ای</h1>
+      <div className="instruments-list">
+        {instrumentsData["percussion"].map((instrument) => (
+          <Link
+            to={`/instruments/${instrument.id}`}
+            key={instrument.id}
+            className="instrument-card"
+          >
+            <img
+              src={instrument.image}
+              alt={instrument.name}
+              className="instrument--img"
+            />
+            <h2 className="instrument--title">{instrument.name}</h2>
+          </Link>
+        ))}
+      </div>
+      <h1>ساز های بادی</h1>
+      <div className="instruments-list">
+        {instrumentsData["wind"].map((instrument) => (
+          <Link
+            to={`/instruments/${instrument.id}`}
+            key={instrument.id}
+            className="instrument-card"
+          >
+            <img
+              src={instrument.image}
+              alt={instrument.name}
+              className="instrument--img"
+            />
+            <h2 className="instrument--title">{instrument.name}</h2>
           </Link>
         ))}
       </div>

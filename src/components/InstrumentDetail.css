@@ -22,9 +22,25 @@
   padding: 0;
 }
 
+.instrument-detail-page p{
+  max-width: 600px;
+}
+
 .teacher-list li {
   background: #eee;
+  color: rgb(29, 29, 29);
   padding: 10px;
   margin: 5px;
   border-radius: 5px;
+}
+
+.teacher-list a {
+  color: rgb(29, 29, 29);
+}
+
+/* واکنش‌گرایی */
+@media (max-width: 768px) {
+  .instrument-detail-page p{
+    max-width: 300px;
+  }
 }

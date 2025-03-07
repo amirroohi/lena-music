@@ -6,24 +6,39 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-desc">
-          <h2><span>لوگو </span>آکادمی موسیقی لنا</h2>
-          <p>توضیحات</p>
+          <h2 className="footer-desc--title">
+            <img src="/logo-lena-light.svg" alt="لوگو" />
+            آکادمی موسیقی لنا
+          </h2>
+          <p>
+            آکادمی موسیقی لنا یک مرکز پیشرو در آموزش موسیقی است. با بهترین
+            اساتید، محیطی عالی برای رشد و توسعه استعدادهای موسیقیایی فراهم
+            می‌کنیم.
+          </p>
         </div>
         {/* بخش لینک‌های ناوبری */}
         <div className="footer-nav">
           <h4>دسترسی سریع</h4>
           <ul>
             <li>
-              <Link to="/">صفحه اصلی</Link>
+              <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+                صفحه اصلی
+              </Link>
             </li>
             <li>
-              <Link to="/teachers">اساتید</Link>
+              <Link to="/teachers" onClick={() => window.scrollTo(0, 0)}>
+                اساتید
+              </Link>
             </li>
             <li>
-              <Link to="/about">درباره ما</Link>
+              <Link to="/about" onClick={() => window.scrollTo(0, 0)}>
+                درباره ما
+              </Link>
             </li>
             <li>
-              <Link to="/contact">ارتباط با ما</Link>
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+                ارتباط با ما
+              </Link>
             </li>
           </ul>
         </div>
@@ -41,7 +56,7 @@ const Footer = () => {
                 اینستاگرام
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="https://facebook.com"
                 target="_blank"
@@ -58,10 +73,7 @@ const Footer = () => {
               >
                 تلگرام
               </a>
-            </li>
-            <li>
-              <a href="mailto:info@lenaacademy.com">ایمیل</a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
