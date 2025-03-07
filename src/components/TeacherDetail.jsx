@@ -19,7 +19,7 @@ const TeacherDetail = () => {
       </div>
       <div className="teacher-video">
         <h2>ویدیو معرفی:</h2>
-        <video src={teacher.videoUrl} controls />
+        <video src={teacher.videoUrl} controls  />
       </div>
       {/* <div className="teacher-comments">
         <h2>نظرات:</h2>

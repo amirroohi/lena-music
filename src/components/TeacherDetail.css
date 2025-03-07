@@ -21,14 +21,16 @@
   
   .teacher-info p {
     font-size: 1.2rem;
-    color: #555;
+    /* color: #ffffff; */
   }
   
   .teacher-video {
     margin: 30px 0;
     text-align: center;
   }
-  
+  .teacher-video h2{
+    margin-bottom: 20px;
+  }
   .teacher-video video {
     width: 100%;
     max-width: 600px;
