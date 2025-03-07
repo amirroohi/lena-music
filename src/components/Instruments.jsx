@@ -13,7 +13,7 @@ const Instruments = () => {
             key={instrument.id}
             className="instrument-card"
           >
-            <img src={instrument.image} alt={instrument.name} />
+            <img src={instrument.image} alt={instrument.name} className="instrument--img" />
             <h2>{instrument.name}</h2>
           </Link>
         ))}

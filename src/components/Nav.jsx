@@ -51,32 +51,68 @@ const Nav = () => {
         className={`navbar-links ${isMenuOpen ? "active" : ""}`}
       >
         <li>
-          <Link to="/" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            to="/"
+            onClick={() => {
+              window.scrollTo(0, 0);
+              setIsMenuOpen(false);
+            }}
+          >
             صفحه اصلی
           </Link>
         </li>
         <li>
-          <Link to="/teachers" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            to="/teachers"
+            onClick={() => {
+              window.scrollTo(0, 0);
+              setIsMenuOpen(false);
+            }}
+          >
             اساتید
           </Link>
         </li>
         <li>
-          <Link to="/instruments" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            to="/instruments"
+            onClick={() => {
+              window.scrollTo(0, 0);
+              setIsMenuOpen(false);
+            }}
+          >
             ساز ها
           </Link>
         </li>
         <li>
-          <Link to="/schedule" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            to="/schedule"
+            onClick={() => {
+              window.scrollTo(0, 0);
+              setIsMenuOpen(false);
+            }}
+          >
             زمانبندی کلاس ها
           </Link>
         </li>
         <li>
-          <Link to="/about" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            to="/about"
+            onClick={() => {
+              window.scrollTo(0, 0);
+              setIsMenuOpen(false);
+            }}
+          >
             درباره ما
           </Link>
         </li>
         <li>
-          <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            to="/contact"
+            onClick={() => {
+              window.scrollTo(0, 0);
+              setIsMenuOpen(false);
+            }}
+          >
             ارتباط با ما
           </Link>
         </li>
@@ -84,7 +120,14 @@ const Nav = () => {
 
       {/* لینک زمان‌بندی کلاس‌ها در سمت چپ نوبار */}
       <div className="navbar-schedule">
-        <Link to="/schedule" className="schedule-link">
+        <Link
+          to="/schedule"
+          className="schedule-link"
+          onClick={() => {
+            window.scrollTo(0, 0);
+            setIsMenuOpen(false);
+          }}
+        >
           <HiOutlineCalendar />
         </Link>
       </div>

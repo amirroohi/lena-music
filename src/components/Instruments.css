@@ -19,13 +19,15 @@
   color: black;
   width: 200px;
   transition: 0.3s;
-}
-
-.instrument-card img {
-  width: 100%;
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .instrument-card:hover {
   transform: scale(1.05);
+}
+.instrument--img {
+  height: 170px;
+  object-fit: contain;
 }

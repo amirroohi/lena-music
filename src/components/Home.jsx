@@ -3,16 +3,17 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 import { teachers } from "../data/teachers";
 
-
 const Home = () => {
   return (
     <div className="home">
       {/* بخش Hero */}
-          <h1>آکادمی موسیقی لنا</h1>
+      <h1>آکادمی موسیقی لنا</h1>
       <div className="hero-section">
         <div className="hero-content">
           <p>یادگیری موسیقی با بهترین اساتید در محیطی دوستانه</p>
-          <a className="cta-button" href="#about">اطلاعات بیشتر</a>
+          <a className="cta-button" href="#about">
+            اطلاعات بیشتر
+          </a>
         </div>
       </div>
 
@@ -36,6 +37,7 @@ const Home = () => {
               to={`/teachers/${teacher.id}`} // لینک به صفحه جزئیات
               key={teacher.id}
               className="teacher-card--home"
+              onClick={() => window.scrollTo(0, 0)}
             >
               {" "}
               <img src={teacher.image} alt={teacher.name} />

@@ -11,11 +11,13 @@ import TeacherDetail from "./components/TeacherDetail";
 import Schedule from "./components/Schedule";
 import Instruments from "./components/Instruments";
 import InstrumentDetail from "./components/InstrumentDetail";
+import "./App.css";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);

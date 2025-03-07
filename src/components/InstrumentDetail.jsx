@@ -8,7 +8,7 @@ const InstrumentDetail = () => {
   const instrument = instrumentsData.find((inst) => inst.id === id);
 
   if (!instrument) {
-    return <h2>ساز موردنظر یافت نشد! 😔</h2>;
+    return <h2>ساز مورد نظر یافت نشد! 😔</h2>;
   }
 
   // فیلتر کردن اساتیدی که این ساز را تدریس می‌کنند
