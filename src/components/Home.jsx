@@ -2,6 +2,12 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
 import { teachers } from "../data/teachers";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const Home = () => {
   return (
@@ -16,7 +22,31 @@ const Home = () => {
           </a>
         </div>
       </div>
+      <div className="swiper-container">
+        <Swiper
+          spaceBetween={10}
+          centeredSlides={true}
+          autoplay={{
+            delay: 1500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          loop={true}
+          speed={3000}
+          modules={[Autoplay, Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <img src="/piano-wallpaper.jpg" alt="instrument" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/piano-wallpaper.jpg" alt="instrument" />
+          </SwiperSlide>
 
+        </Swiper>
+      </div>
       {/* توضیحات درباره آموزشگاه */}
       <div className="about-section" id="about">
         <h2>درباره آکادمی موسیقی لنا</h2>
@@ -27,7 +57,6 @@ const Home = () => {
           آموزش‌های استاندارد و حرفه‌ای بهره‌مند شوید.
         </p>
       </div>
-
       {/* لیست اساتید */}
       <div className="teachers-section">
         <h2>اساتید ما</h2>
